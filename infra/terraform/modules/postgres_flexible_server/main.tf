@@ -13,7 +13,7 @@ resource "random_string" "key_vault_suffix" {
 locals {
   key_vault_name = coalesce(
     var.key_vault_name,
-    "airlinepriceapidevkv${random_string.key_vault_suffix.result}"
+    "apidevkv${random_string.key_vault_suffix.result}"
   )
 
   postgres_fqdn = azurerm_postgresql_flexible_server.this.fqdn
@@ -87,7 +87,7 @@ resource "azurerm_key_vault" "this" {
   soft_delete_retention_days      = 7
   purge_protection_enabled        = false
   enabled_for_template_deployment = false
-  enable_rbac_authorization       = false
+  rbac_authorization_enabled      = false
 }
 
 resource "azurerm_key_vault_access_policy" "terraform_principal" {

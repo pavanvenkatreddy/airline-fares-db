@@ -42,6 +42,10 @@ output "key_vault_name" {
   value = module.postgres.key_vault_name
 }
 
+output "key_vault_resource_group" {
+  value = module.postgres.key_vault_resource_group
+}
+
 output "key_vault_uri" {
   value = module.postgres.key_vault_uri
 }
