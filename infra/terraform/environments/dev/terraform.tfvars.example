@@ -1,0 +1,10 @@
+subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# Optional firewall rules for non-Azure clients.
+# allowed_ip_rules = [
+#   {
+#     name             = "office"
+#     start_ip_address = "203.0.113.10"
+#     end_ip_address   = "203.0.113.10"
+#   }
+# ]
